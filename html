@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom for Standoff</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:radial-gradient(ellipse at bottom,#000000 0%,#01030a 60%,#000000 100%);
+overflow:hidden;
+color:white;
+position:relative;
+}
+
+/* ===== ЗВЁЗДЫ ===== */
+
+.stars{
+position:absolute;
+width:100%;
+height:200%;
+background-image:
+radial-gradient(2px 2px at 5% 10%, white, transparent),
+radial-gradient(2px 2px at 15% 30%, white, transparent),
+radial-gradient(2px 2px at 25% 50%, white, transparent),
+radial-gradient(2px 2px at 35% 70%, white, transparent),
+radial-gradient(2px 2px at 45% 20%, white, transparent),
+radial-gradient(2px 2px at 55% 40%, white, transparent),
+radial-gradient(2px 2px at 65% 60%, white, transparent),
+radial-gradient(2px 2px at 75% 80%, white, transparent),
+radial-gradient(2px 2px at 85% 25%, white, transparent),
+radial-gradient(2px 2px at 95% 45%, white, transparent),
+radial-gradient(2px 2px at 10% 85%, white, transparent),
+radial-gradient(2px 2px at 20% 65%, white, transparent),
+radial-gradient(2px 2px at 30% 15%, white, transparent),
+radial-gradient(2px 2px at 40% 35%, white, transparent),
+radial-gradient(2px 2px at 50% 75%, white, transparent),
+radial-gradient(2px 2px at 60% 55%, white, transparent),
+radial-gradient(2px 2px at 70% 10%, white, transparent),
+radial-gradient(2px 2px at 80% 50%, white, transparent),
+radial-gradient(2px 2px at 90% 70%, white, transparent),
+radial-gradient(2px 2px at 25% 90%, white, transparent);
+animation:moveStars 80s linear infinite;
+opacity:0.9;
+}
+
+@keyframes moveStars{
+from{transform:translateY(0);}
+to{transform:translateY(-1000px);}
+}
+
+/* ===== FRAME ===== */
+
+.frame{
+position:relative;
+width:500px;
+padding:50px 40px;
+border-radius:30px;
+background:linear-gradient(145deg,#2a1405,#1a0c02);
+border:1px solid rgba(255,140,0,0.3);
+backdrop-filter:blur(15px);
+box-shadow:0 0 40px rgba(255,120,0,0.4);
+text-align:center;
+z-index:10;
+transition:0.3s;
+}
+
+.frame:hover{
+box-shadow:0 0 60px rgba(255,140,0,0.7);
+}
+
+h1{
+font-size:45px;
+color:#ff9d2f;
+margin-bottom:20px;
+}
+
+.subtitle{
+font-size:18px;
+opacity:0.85;
+margin-bottom:30px;
+color:#ffb76b;
+}
+
+.download-btn{
+display:inline-block;
+padding:16px 40px;
+background:linear-gradient(45deg,#ff9d2f,#ff6a00);
+color:black;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
+font-weight:700;
+transition:0.3s;
+}
+
+.download-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px rgba(255,140,0,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="frame">
+<h1>WPlayer</h1>
+<div class="subtitle">WPlayer от @projectwest</div>
+<a href="#" class="download-btn">Скачать файл</a>
+</div>
+
+</body>
+</html>
